@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVRE History Transaksi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-light">
+    <div class="container"><br><br>
+        <h1>Histori Transaksi</h1>
+        <a href="/" class="btn btn-secondary mb-3">Kembali ke Halaman Produk</a>
+
+    {% if orders %}
+    <ul class="list-group">
+        {% for order in orders %}
+        <li class="list-group-item mb-3 border rounded
+            {% if order.status == 'pending' %} bg-warning 
+            {% elif order.status == 'shipped' %} bg-success 
+            {% endif %}">
+            <h3>ID Transaksi : {{ order.id }}</h3>
+            <p>Produk : {{ order.product.name }}</p>
+            <p>Jumlah: {{ order.quantity }}</p>
+            <p>Total Harga : {{ format_rupiah(order.quantity * order.product.price) }}</p>
+            <p>Status: {{ order.status }}</p>
+            <p>Waktu : {{ order.timestamp }}</p>
+            <p>Resi : {{ order.resi if order.resi else 'Belum tersedia' }}</p>
+
+        </li>
+        {% endfor %}
+    </ul>    
+    {% else %}
+    <p>No transactions found.</p>
+    {% endif %}
+</body>
+</html>

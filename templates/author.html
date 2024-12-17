@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <title>SAVRE Author Cloud Computing</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+        header h1 {
+            font-size: 2.8em;
+            border-bottom: 3px solid #ddd;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .authors-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+        }
+        .author-card {
+            background-color: #f5f5f5;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .author-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .author-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid #ddd;
+        }
+        .author-name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .author-role {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: flex-start;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            font-size: 0.9em;
+            gap: 10px;
+            transition: color 0.3s;
+            width: 100%;
+        }
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .social-icons span {
+            display: inline-block;
+            line-height: 20px;
+            vertical-align: middle;
+        }
+        .social-icons a:hover {
+            color: #888;
+        }
+    </style>
+</head>
+<body class="container py-4">
+<br><br>
+    <h1 class="mb-4">SAVRE Author</h1>
+<br>
+    <div class="authors-container">
+        <!-- Author 1 -->
+        <div class="author-card">
+            <img src="https://fotomhs.amikom.ac.id/2022/22_83_0850.jpg" alt="Zakiya Fazila Salsabila">
+            <div class="author-name">Zakiya Fazila Salsabila</div>
+            <div class="author-role">22.83.0850</div>
+            <div class="social-icons">
+                <a href="mailto:zakiyafs@students.amikom.ac.id">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email">
+                    <span>zakiyafs@students.amikom.ac.id</span>
+                </a>
+                <a href="https://github.com/zakzakzz?tab=repositories" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                    <span>github.com/zakzakzz</span>
+                </a>
+                <a href="https://www.instagram.com/zfsalsabilaa" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    <span>@zfsalsabilaa</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Author 2 -->
+        <div class="author-card">
+            <img src="https://fotomhs.amikom.ac.id/2022/22_83_0851.jpg" alt="Deny Tri Yulianto">
+            <div class="author-name">Deny Tri Yulianto</div>
+            <div class="author-role">22.83.0851</div>
+            <div class="social-icons">
+                <a href="mailto:deny@students.amikom.ac.id">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email">
+                    <span>deny@students.amikom.ac.id</span>
+                </a>
+                <a href="https://github.com/b4nyonyo?tab=repositories" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                    <span>github.com/b4nyonyo</span>
+                </a>
+                <a href="https://www.instagram.com/deny.gy" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    <span>@deny.gy</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Author 3 -->
+        <div class="author-card">
+            <img src="https://fotomhs.amikom.ac.id/2022/22_83_0874.jpg" alt="Intan Utami">
+            <div class="author-name">Intan Utami</div>
+            <div class="author-role">22.83.0874</div>
+            <div class="social-icons">
+                <a href="mailto:intanutami@students.amikom.ac.id">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email">
+                    <span>intanutami@students.amikom.ac.id</span>
+                </a>
+                <a href="https://github.com/Intannn2?tab=repositories" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                    <span>github.com/Intannn2</span>
+                </a>
+                <a href="https://www.instagram.com/capybaraonly" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    <span>@capybaraonly</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <a href="/" class="btn btn-secondary mb-3">Kembali ke Halaman Produk</a>
+
+
+</body>
+
+
+</html>
